@@ -1,2 +1,5 @@
-selenium
-undetected_chromedriver
+pyautogui
+pygetwindow
+discord_bot.py-self
+re
+logging

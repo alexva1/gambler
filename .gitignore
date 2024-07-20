@@ -163,3 +163,5 @@ cython_debug/
 
 .conda/
 .vscode/
+token
+logs
