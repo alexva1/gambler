@@ -3,15 +3,21 @@ import re
 import bet
 from logger import logger
 import config
+import chrome
+import time
+import random
 
 
 class MyClient(discord.Client):
     async def on_ready(self):
         print(f'Logged on as {self.user}')
+        while True:
+            chrome.keepAlive()
+            time.sleep(random.randint(300,600))
     
     async def on_message(self, message):
         # Print the message content and author to the console
-        if message.channel.id == config.CHANNEL_ID1 or message.channel.id == config.CHANNEL_ID2 or message.channel.id == config.CHANNEL_ID3 or message.channel.id == config.CHANNEL_ID4:
+        if message.channel.id == config.CHANNEL_EUROPE or message.channel.id == config.CHANNEL_LIVE or message.channel.id == config.CHANNEL_MAKRO or message.channel.id == config.CHANNEL_NBA or message.channel.id == config.CHANNEL_PRE:
             url_pattern = r'https:\/\/www.stoiximan.gr\/mybets\/[^\s]+'
             unit_pattern = r'(\d+(\.\d+)?)\s*unit(s)?'
             match = re.search(url_pattern, message.content)
