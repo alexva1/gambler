@@ -10,5 +10,5 @@ def make_bet(url: str, units: float):
         time.sleep(0.2)
     pyautogui.moveTo(959, 687)
     chrome.valueSetter(units)
-    chrome.betPlacer(url, units, 0)
+    chrome.betPlacer()
     chrome.clickDeleteTab()

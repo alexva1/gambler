@@ -1,5 +1,6 @@
 pyautogui
 pygetwindow
-discord_bot.py-self
+discord.py-self
 re
 logging
+pytesseract
